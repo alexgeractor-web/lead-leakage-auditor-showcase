@@ -1,0 +1,43 @@
+name: Public research previews safety
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'labs/**'
+      - 'index.html'
+      - '.github/workflows/labs-public-safety.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-static-marketing-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check research previews are read-only and explicitly synthetic
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          paths=[
+              Path('labs/index.html'),
+              Path('labs/crm-migration-validator/index.html'),
+              Path('labs/form-conversion-guard/index.html')
+          ]
+          for path in paths:
+              data=path.read_text(encoding='utf8')
+              lower=data.lower()
+              assert '<!doctype html>' in lower, path
+              assert 'content-security-policy' in lower, path
+              assert "script-src 'none'" in lower, path
+              assert "form-action 'none'" in lower, path
+              assert '<script' not in lower and '<form' not in lower, path
+              assert 'синтетич' in lower, path
+              assert 'agenticcommerce975@gmail.com' in lower, path
+              assert 'lead-leakage-auditor-core' not in lower, path
+              print(path, 'OK (static, explicit fictional-data disclaimer)')
+          assert 'href="labs/"' in Path('index.html').read_text(encoding='utf8')
+          print('Public labs linked from main showcase')
+          PY
