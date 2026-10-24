@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="680" viewBox="0 0 1170 680" role="img" aria-labelledby="title desc">
+<title id="title">LEAD LEAKAGE AUDITOR — synthetic visual preview</title>
+<desc id="desc">Fictional lead analysis with risk counts and follow-up queue. Does not depict real customer data or real revenue.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e29"/><stop offset="1" stop-color="#08131b"/></linearGradient><linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7ae2be"/><stop offset="1" stop-color="#44b89a"/></linearGradient></defs>
+<rect width="1170" height="680" rx="28" fill="url(#bg)"/>
+<rect x="26" y="26" width="1118" height="628" rx="21" fill="#11212b" stroke="#28404a"/>
+<rect x="53" y="52" width="1064" height="65" rx="12" fill="#142c35"/>
+<text x="74" y="92" font-family="Arial,sans-serif" font-weight="700" font-size="21" fill="#f5f8f4">LEAD LEAKAGE <tspan fill="#72e4bb">AUDITOR</tspan></text>
+<rect x="799" y="69" width="287" height="28" rx="13" fill="#21463f"/>
+<text x="942" y="88" font-family="Arial,sans-serif" text-anchor="middle" font-weight="700" font-size="13" fill="#b4f7de">SYNTHETIC PREVIEW ONLY</text>
+<text x="65" y="154" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#edf8f4">Результаты предварительной проверки</text>
+<text x="65" y="180" font-family="Arial,sans-serif" font-size="14" fill="#a5bdc5">Пример на вымышленных данных. Не фактические финансовые потери.</text>
+<g font-family="Arial,sans-serif">
+<rect x="62" y="202" width="245" height="120" rx="14" fill="#1b333d" stroke="#36525d"/>
+<text x="84" y="237" font-size="14" fill="#b6cad0">Заявок в выборке</text><text x="84" y="289" font-weight="700" font-size="42" fill="#fff">320</text>
+<rect x="329" y="202" width="245" height="120" rx="14" fill="#1b333d" stroke="#36525d"/>
+<text x="351" y="237" font-size="14" fill="#b6cad0">Сигналов для проверки</text><text x="351" y="289" font-weight="700" font-size="42" fill="#7ae2be">47</text>
+<rect x="596" y="202" width="245" height="120" rx="14" fill="#1b333d" stroke="#36525d"/>
+<text x="618" y="237" font-size="14" fill="#b6cad0">Высокий приоритет</text><text x="618" y="289" font-weight="700" font-size="42" fill="#ffc087">11</text>
+<rect x="863" y="202" width="245" height="120" rx="14" fill="#1b333d" stroke="#36525d"/>
+<text x="885" y="237" font-size="14" fill="#b6cad0">Номинал сделок*</text><text x="885" y="287" font-weight="700" font-size="32" fill="#fff">1,42 млн ₽</text>
+<rect x="62" y="347" width="1046" height="253" rx="15" fill="#172e39" stroke="#36525d"/>
+<text x="85" y="385" font-weight="700" font-size="18" fill="#f0f8f5">Очередь для ручной проверки</text>
+<text x="85" y="428" font-size="13" fill="#97b0bb">ID</text><text x="242" y="428" font-size="13" fill="#97b0bb">СИГНАЛ</text><text x="727" y="428" font-size="13" fill="#97b0bb">ПРИОРИТЕТ</text><text x="940" y="428" font-size="13" fill="#97b0bb">НОМИНАЛ</text>
+<line x1="84" y1="442" x2="1085" y2="442" stroke="#365560"/>
+<text x="85" y="476" font-size="16" fill="#eaf5f0">L-0184</text><text x="242" y="476" font-size="15" fill="#eaf5f0">Входящее без ответа</text><text x="727" y="476" font-size="15" fill="#ffc087">Высокий</text><text x="940" y="476" font-size="15" fill="#eaf5f0">75 000 ₽</text>
+<line x1="84" y1="493" x2="1085" y2="493" stroke="#2a4751"/>
+<text x="85" y="526" font-size="16" fill="#eaf5f0">L-0291</text><text x="242" y="526" font-size="15" fill="#eaf5f0">Просрочен следующий контакт</text><text x="727" y="526" font-size="15" fill="#7ae2be">Средний</text><text x="940" y="526" font-size="15" fill="#eaf5f0">38 000 ₽</text>
+<line x1="84" y1="543" x2="1085" y2="543" stroke="#2a4751"/>
+<text x="85" y="575" font-size="16" fill="#eaf5f0">L-0312</text><text x="242" y="575" font-size="15" fill="#eaf5f0">КП без дальнейшего действия</text><text x="727" y="575" font-size="15" fill="#ffc087">Высокий</text><text x="940" y="575" font-size="15" fill="#eaf5f0">130 000 ₽</text>
+<text x="65" y="632" font-size="13" fill="#a6b9be">* Номинал отмеченных сделок — не доказанная потеря или возвращённая выручка.</text>
+</g></svg>
