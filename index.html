@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08171e">
+<meta name="description" content="Lead Leakage Auditor: локальный аудит CSV-выгрузок CRM для поиска забытых обращений и просроченных действий. Технический preview.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; connect-src 'none'; script-src 'none'">
+<title>LEAD LEAKAGE AUDITOR · Revenue Recovery</title>
+<style>
+:root{color-scheme:dark;--bg:#08171e;--panel:#112a33;--stroke:#294750;--ink:#f5fbf8;--muted:#abc1c7;--mint:#84ebbd}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse 70% 60% at 92% 5%,#20483d 0,transparent 75%),var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:var(--mint);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+header{border-bottom:1px solid var(--stroke)}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 0;flex-wrap:wrap}
+.wordmark{font-size:14px;font-weight:850;letter-spacing:.08em}.wordmark em{font-style:normal;color:var(--mint)}
+nav{display:flex;gap:23px;flex-wrap:wrap}nav a{font-size:13px;color:#bdd6ce}
+.hero{padding:90px 0 60px}.label{display:inline-block;font-size:11px;font-weight:850;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);margin-bottom:10px}
+h1{font-size:clamp(44px,8vw,87px);line-height:1.01;letter-spacing:-.055em;margin:20px 0 27px;max-width:920px}
+h1 span{color:var(--mint)}.intro{font-size:clamp(17px,2.4vw,21px);max-width:735px;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin:35px 0}
+.btn{padding:14px 24px;border:1px solid #437469;border-radius:9px;font-size:14px;font-weight:750;background:#16362d}.btn:first-child{color:#09221c;background:var(--mint);border-color:var(--mint)}
+.band{padding:17px 22px;border:1px solid #375b4a;border-radius:10px;background:#12342e;color:#d9f7e8;font-size:13px;max-width:940px}
+section{padding:60px 0}h2{font-size:clamp(26px,4vw,39px);line-height:1.16;letter-spacing:-.02em;margin:16px 0 21px}
+.sectionlead{max-width:780px;color:var(--muted);margin-bottom:28px}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{padding:26px;border:1px solid var(--stroke);background:var(--panel);border-radius:14px}
+.card b{font-size:11px;letter-spacing:.15em;color:var(--mint)}
+.card h3{font-size:18px;margin:17px 0 12px}
+.card p{font-size:14px;color:var(--muted);margin:0}
+.preview{display:block;width:100%;border:1px solid var(--stroke);border-radius:16px}
+small{color:var(--muted)}.pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.price{font-size:35px;font-weight:850;letter-spacing:-.04em;margin:14px 0}.price strong{color:var(--mint)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+ul{padding-left:18px;color:var(--muted)}
+li{margin-bottom:9px}
+footer{padding:40px 0;border-top:1px solid var(--stroke);font-size:13px;color:var(--muted)}
+@media(max-width:720px){.hero{padding:60px 0 28px}.features,.pricing,.split{grid-template-columns:1fr}nav{gap:13px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="wordmark">LEAD LEAKAGE <em>AUDITOR</em></div><nav><a href="#how">Функции</a><a href="#preview">Пример</a><a href="#formats">Сотрудничество</a><a href="#contact">Контакт</a></nav></div></header>
+<main>
+<section class="wrap hero">
+<span class="label">REVENUE RECOVERY · TECHNICAL PREVIEW V0.2</span>
+<h1>Заметьте заявки,<br><span>которые потерялись</span><br>в процессе.</h1>
+<p class="intro">Локальный анализ разрешённой CSV-выгрузки CRM: задержки ответов, забытые коммерческие предложения и просроченные действия. Очередь для проверки руководителем продаж, а не догадки о «потерянных миллионах».</p>
+<div class="actions"><a class="btn" href="https://github.com/alexgeractor-web/lead-leakage-auditor-showcase/issues/new?template=buyer-inquiry.yml">Обсудить задачу ↗</a><a class="btn" href="#preview">Посмотреть пример ↓</a></div>
+<div class="band"><strong>Статус:</strong> проверенный на синтетических сценариях закрытый браузерный прототип. Это ознакомительная страница, не рабочая CRM-интеграция и не публичный SaaS. Реальных продаж и доказанного возврата выручки пока нет.</div>
+</section>
+<section class="wrap" id="how"><span class="label">01 / КОНКРЕТНАЯ ЗАДАЧА</span><h2>Проверяем то, что сложно заметить вручную</h2>
+<div class="features">
+<div class="card"><b>01 · DETECT</b><h3>Входящие без ответа</h3><p>Проверка длительности ожидания реакции по зафиксированным CRM-событиям и установленному порогу.</p></div>
+<div class="card"><b>02 · FOLLOW UP</b><h3>Забытые КП и задачи</h3><p>Поиск просроченных действий и предложений без последующего контакта в одной выгрузке.</p></div>
+<div class="card"><b>03 · REVIEW</b><h3>Очередь проверки</h3><p>Сводный список для менеджера. Сумма отмеченных сделок не приравнивается к подтверждённому убытку.</p></div>
+</div></section>
+<section class="wrap" id="preview"><span class="label">02 / СИНТЕТИЧЕСКАЯ ДЕМОНСТРАЦИЯ</span><h2>Как выглядит предварительный результат</h2><p class="sectionlead">Это графический пример на полностью вымышленных числах. Исходный код и исполняемая сборка находятся в отдельном приватном репозитории. Тестирование на реальной CRM требует разрешённой выгрузки и ручной сверки.</p><img class="preview" src="assets/preview.svg" alt="Пример панели Lead Leakage Auditor с синтетическими заявками и обозначением SYNTHETIC PREVIEW ONLY" loading="lazy"><p><small>Числа и ID на изображении вымышленные. 1,42 млн ₽ — пример суммарного номинала отмеченных сделок, а не потерянной прибыли.</small></p></section>
+<section class="wrap" id="formats"><span class="label">03 / КОММЕРЧЕСКОЕ ОБСУЖДЕНИЕ</span><h2>Сначала подтверждаем задачу. Затем предлагаем договор.</h2>
+<div class="pricing">
+<div class="card"><b>ДИАГНОСТИКА ОДНОГО СЦЕНАРИЯ</b><div class="price">от <strong>19 000 ₽</strong></div><p>Ограниченная проверка согласованной обезличенной CSV-выгрузки. Результат — сигналы и очередь ручной проверки с указанными ограничениями.</p></div>
+<div class="card"><b>РАСШИРЕННЫЙ ПРОЦЕССНЫЙ АУДИТ</b><div class="price">от <strong>39 000 ₽</strong></div><p>Дополнительная сверка правил и формата данных, отбор приоритетных случаев, согласованная отчётность.</p></div>
+</div>
+<p><small>Эти суммы — неподтверждённые ценовые гипотезы и не публичная оферта. Точная стоимость, сроки, допустимая обработка данных, критерии приёмки, лицензия и сопровождение устанавливаются договором. Лицензирование, white-label и продажа актива — индивидуально.</small></p>
+</section>
+<section class="wrap" id="contact"><span class="label">04 / СЛЕДУЮЩИЙ ШАГ</span><h2>Описать проблему без передачи клиентских данных</h2>
+<div class="split"><div><p class="sectionlead">Расскажите, какая CRM используется, какая проблема возникает и какой результат хотелось бы получить. В публичных GitHub Issues нельзя размещать списки клиентов, платежные сведения и секреты.</p>
+<div class="actions"><a class="btn" href="https://github.com/alexgeractor-web/lead-leakage-auditor-showcase/issues/new?template=buyer-inquiry.yml">Открыть вопрос на GitHub ↗</a><a class="btn" href="mailto:agenticcommerce975@gmail.com?subject=Lead%20Leakage%20Auditor%20Inquiry">Написать приватно ↗</a></div></div>
+<div class="card"><h3>Что потребуется для пилота</h3><ul><li>Описание бизнес-процесса и допустимых полей CRM.</li><li>Обезличенная и разрешённая тестовая выгрузка.</li><li>10–20 эталонных случаев для ручной сверки.</li><li>Договор с критериями приёмки и исправления дефектов.</li></ul></div></div></section>
+</main><footer><div class="wrap">© 2026 LEAD LEAKAGE AUDITOR · Technical preview. No actual customer revenue or production readiness claimed. <a href="https://github.com/alexgeractor-web/lead-leakage-auditor-showcase">GitHub →</a></div></footer>
+</body></html>
