@@ -1,0 +1,28 @@
+name: Public product or business question
+description: NON-CONFIDENTIAL discussion of LEAD LEAKAGE AUDITOR
+body:
+  - type: markdown
+    attributes:
+      value: |
+        PUBLIC ISSUE: everyone can read this. Do not post personal/customer data, CRM exports, passwords, private diagrams, pricing quotes or API tokens.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Product functionality
+        - Offline demo and methodology
+        - CRM compatibility
+        - Diagnostic service and budget
+        - Licensing or white-label
+        - Acquisition and partnership
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question (non-confidential only)
+      description: High-level discussion; private data must use a separately agreed secure route.
+      placeholder: What would you like to clarify?
+    validations:
+      required: true
