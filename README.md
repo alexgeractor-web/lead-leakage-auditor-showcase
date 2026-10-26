@@ -7,6 +7,10 @@
 
 ![Synthetic illustrative screenshot](assets/preview.svg)
 
+## Free practical guide
+
+[**CRM lead leakage: a 10-minute self-check (EN / RU)**](docs/CRM-LEAD-LEAKAGE-SELF-CHECK.md) — five verifiable workflow checks, a privacy-first review method and clear limitations. No signup or customer data required.
+
 ## Problem and solution
 
 Sales teams may miss incoming inquiries, delay proposals or forget promised follow-ups. LEAD LEAKAGE AUDITOR helps review **one authorized CRM export in CSV format**, without requiring a CRM password or a live API connection.
