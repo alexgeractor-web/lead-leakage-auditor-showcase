@@ -48,6 +48,8 @@ The public showcase does **not** publish proprietary software source, customer r
 - [Request a private business discussion](mailto:agenticcommerce975@gmail.com?subject=Lead%20Leakage%20Auditor%20Inquiry). **Do not email CSV exports, customer data, passwords or private diagrams unprotected.**
 - Licensing, white-label and asset acquisition are discussed individually, conditional on due diligence and agreement.
 
+**Founder / community:** [Alex Ger Ventures on Reddit](https://www.reddit.com/user/AlexGerVentures/) — discussions and practical ideas; technical questions are welcome in the GitHub Issues section.
+
 ## Security and IP
 This repository is deliberately PUBLIC. Any material uploaded here is visible and may be copied. The commercial code is maintained separately in a **PRIVATE** repository. The documents are published for evaluation only; no open-source license is granted. See [LICENSE](LICENSE) and [SECURITY.md](SECURITY.md).
 
