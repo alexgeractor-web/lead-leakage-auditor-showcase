@@ -11,6 +11,10 @@
 
 [**CRM lead leakage: a 10-minute self-check (EN / RU)**](docs/CRM-LEAD-LEAKAGE-SELF-CHECK.md) — five verifiable workflow checks, a privacy-first review method and clear limitations. No signup or customer data required.
 
+## Avoid false positives before claiming revenue leakage
+
+[**7 common CRM alert false positives (EN / RU)**](docs/CRM-LEAD-LEAKAGE-FALSE-POSITIVES.md) — a free, privacy-first validation checklist for RevOps and CRM integrators. Examples are synthetic; no client outcomes or recovered revenue are claimed.
+
 ## Problem and solution
 
 Sales teams may miss incoming inquiries, delay proposals or forget promised follow-ups. LEAD LEAKAGE AUDITOR helps review **one authorized CRM export in CSV format**, without requiring a CRM password or a live API connection.
