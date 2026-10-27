@@ -34,6 +34,8 @@ We build and evaluate focused technical tools for operational problems. Our appr
 
 ## Contact and security
 
+**Reddit — founder discussions:** [u/AlexGerVentures](https://www.reddit.com/user/AlexGerVentures/) · Practical discussions about software, AI automation and business systems.
+
 **Business inquiries:** [agenticcommerce975@gmail.com](mailto:agenticcommerce975@gmail.com?subject=Digital%20Asset%20Factory%20-%20Business%20Inquiry).
 
 For non-confidential technical questions, use the Issues templates in the appropriate public showcase. **Do not post or email passwords, API keys, customer exports or personal data.**
