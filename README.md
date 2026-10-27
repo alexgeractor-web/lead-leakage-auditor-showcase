@@ -1,9 +1,21 @@
-# LEAD LEAKAGE AUDITOR
-**Revenue Recovery · Public Product Showcase · v0.2 technical preview**
+![Lead Leakage Auditor — CRM workflow diagnostics](assets/lead-leakage-hero.svg)
 
-**Найдите обращения и сделки, которые требуют внимания, прежде чем считать их упущенной выручкой.**
+# Lead Leakage Auditor
+**Spot CRM workflow exceptions. Verify findings before calling them revenue leakage.**
 
-[🇷🇺 О продукте](#на-русском) · [Capabilities / Scope](docs/PRODUCT_SCOPE.md) · [Commercial options](docs/COMMERCIAL_OPTIONS.md) · [Ask a question](https://github.com/alexgeractor-web/lead-leakage-auditor-showcase/issues/new?template=buyer-inquiry.yml) · [Security](SECURITY.md)
+[**Explore presentation**](index.html) · [**Free self-check**](docs/CRM-LEAD-LEAKAGE-SELF-CHECK.md) · [**Product scope**](docs/PRODUCT_SCOPE.md) · [**Commercial discussion**](docs/COMMERCIAL_OPTIONS.md) · [**Contact privately**](mailto:agenticcommerce975@gmail.com?subject=Lead%20Leakage%20Auditor%20Inquiry) · [**Русский**](#на-русском)
+
+> **Technology status:** Offline, private browser-based CSV prototype tested with synthetic cases. Not a live CRM integration, production SaaS, independently certified solution or proven revenue-recovery service.
+
+| Built for | What it can flag | How results are used |
+| :--- | :--- | :--- |
+| Revenue operations, sales managers and CRM integrators | Unanswered inquiries, overdue next actions and stalled open opportunities in authorized CSV exports | Prioritized **human review**; thresholds and findings must be verified against the customer's workflow |
+
+**Free practical resources:** [Five CRM checks](docs/CRM-LEAD-LEAKAGE-SELF-CHECK.md) · [Seven false positives](docs/CRM-LEAD-LEAKAGE-FALSE-POSITIVES.md) · [Buyer checklist](docs/BUYER_CHECKLIST.md)
+
+**Related engineering work:** [Agentic Commerce — public integration showcase](https://github.com/alexgeractor-web/agentic-commerce-public-show-case) · [Digital Asset Factory portfolio](docs/GITHUB-PROFILE-README.md)
+
+---
 
 ![Synthetic illustrative screenshot](assets/preview.svg)
 
