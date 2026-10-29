@@ -11,7 +11,7 @@
 | :--- | :--- | :--- |
 | Revenue operations, sales managers and CRM integrators | Unanswered inquiries, overdue next actions and stalled open opportunities in authorized CSV exports | Prioritized **human review**; thresholds and findings must be verified against the customer's workflow |
 
-**Free practical resources:** [Five CRM checks](docs/CRM-LEAD-LEAKAGE-SELF-CHECK.md) · [Seven false positives](docs/CRM-LEAD-LEAKAGE-FALSE-POSITIVES.md) · [12 CRM migration acceptance checks](docs/CRM-MIGRATION-READINESS-CHECKLIST.md) · [Buyer checklist](docs/BUYER_CHECKLIST.md)
+**Free practical resources:** [Five CRM checks](docs/CRM-LEAD-LEAKAGE-SELF-CHECK.md) · [Seven false positives](docs/CRM-LEAD-LEAKAGE-FALSE-POSITIVES.md) · [12 CRM migration acceptance checks](docs/CRM-MIGRATION-READINESS-CHECKLIST.md) · [CRM merge QA sampling guide](docs/CRM-MERGE-VALIDATION-SAMPLING.md) · [Buyer checklist](docs/BUYER_CHECKLIST.md)
 
 **Related engineering work:** [Agentic Commerce — public integration showcase](https://github.com/alexgeractor-web/agentic-commerce-public-show-case) · [Digital Asset Factory portfolio](docs/GITHUB-PROFILE-README.md)
 
