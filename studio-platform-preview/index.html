@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Interactive white-label cinema studio platform preview: edit a fictional studio brand, films, and crew profiles. Synthetic browser-only demo.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; form-action 'none'; base-uri 'none'; connect-src 'none'; img-src 'none'; font-src 'none'; object-src 'none'">
+<title>Film Studio Platform | Interactive White-Label Preview</title>
+<style>
+:root{--accent:#d5b08d;--bg:#0b0e12;--panel:#141a22;--muted:#97a5b3;--line:#303744;--text:#f4f5f6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--accent)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:15px clamp(20px,4vw,56px);border-bottom:1px solid var(--line);background:#0e1217;position:sticky;top:0;z-index:9}
+.signature{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:750;letter-spacing:.13em}.mark{border:1px solid var(--accent);color:var(--accent);padding:8px 10px;font-size:15px}.flag{font-size:10px;font-weight:700;letter-spacing:.1em;border:1px solid #5a4b3f;color:#f0c69d;padding:6px 9px;border-radius:20px}.tools{display:flex;gap:8px;flex-wrap:wrap}
+.button{border:1px solid #5d6672;color:white;background:transparent;border-radius:7px;padding:9px 14px}.button:hover{border-color:var(--accent)}.button.primary{color:#161514;background:var(--accent);border-color:var(--accent);font-weight:750}.button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.container{max-width:1420px;margin:auto;padding:34px clamp(20px,4vw,56px)}
+.kicker{font-size:11px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-weight:750;margin:0 0 14px}
+h1{font-family:Georgia,serif;font-size:clamp(37px,6.5vw,87px);font-weight:400;letter-spacing:-.04em;line-height:1.04;max-width:900px;margin:0 0 22px}
+h2{font:normal clamp(28px,3.4vw,42px) Georgia,serif;letter-spacing:-.02em;margin:0 0 13px}h3{margin:4px 0 8px;font-size:18px}
+.lead{color:#c4cbd1;font-size:clamp(15px,1.7vw,19px);max-width:690px}.meta{font-size:12px;color:var(--muted);letter-spacing:.08em}
+.hero{min-height:460px;padding:55px clamp(22px,5vw,70px);display:flex;align-items:flex-end;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 37%,color-mix(in srgb,var(--accent),transparent 78%),transparent 42%),linear-gradient(130deg,#222a35,#11161d 60%,#080b0e);border:1px solid #31363f}
+.hero:before{content:"";position:absolute;right:8%;top:-80px;width:340px;height:650px;border:1px solid #ffffff29;transform:rotate(28deg);box-shadow:0 0 0 40px #ffffff07,0 0 0 100px #ffffff05}
+.hero>*{position:relative}.hero h1{max-width:680px}
+.section{margin-top:65px}.section-header{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#151b22;border:1px solid #323c47;overflow:hidden}.art{height:190px;background:radial-gradient(circle at 35% 35%,#ffffff20,transparent 30%),linear-gradient(145deg,#222e38,#3b3b43 55%,#171b24);display:flex;align-items:center;justify-content:center;font-size:35px;color:#ffffff50;font-family:Georgia,serif}.card:nth-child(2) .art{background:radial-gradient(circle at 65% 45%,#ffffff17,transparent 35%),linear-gradient(125deg,#2e2633,#282f43,#1a1b26)}.card:nth-child(3) .art{background:linear-gradient(140deg,#192730,#353733,#1a222e)}.card-body{padding:20px}.card-body p{margin:0 0 12px;color:var(--muted);font-size:12px}
+.crew{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.person{padding:24px;border:1px solid #303c47;background:#10151b}.avatar{width:54px;height:54px;border:1px solid var(--accent);display:grid;place-items:center;color:var(--accent);font:normal 20px Georgia,serif;border-radius:50%;margin-bottom:15px}
+.note{padding:17px 20px;border:1px solid #554635;background:#2c251c;font-size:12px;color:#f0d7b9;margin:40px 0}
+.desk{border:1px solid #38414f;background:#111821;display:grid;grid-template-columns:260px minmax(0,1fr);min-height:450px}
+.desk-nav{border-right:1px solid #38414f;padding:26px 18px;background:#0e131a}
+.desk-nav p{font-size:12px;color:var(--muted)}.desk-nav strong{color:var(--accent);letter-spacing:.15em;font-size:11px}.desk-main{padding:28px clamp(20px,3vw,46px)}
+.control{margin:0 0 18px}.control label{font-size:12px;color:#b9c2cd;display:block;margin-bottom:6px}.control input{width:100%;background:#080c11;color:white;border:1px solid #49515e;padding:12px 14px;border-radius:6px}.columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.status{font-size:11px;color:#9fbc99;letter-spacing:.12em}.footer{margin:55px 0 18px;padding:24px 0;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer p{max-width:640px;color:var(--muted);font-size:12px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:760px){.cards,.crew,.columns{grid-template-columns:1fr}.desk{grid-template-columns:1fr}.desk-nav{border-right:0;border-bottom:1px solid var(--line)}.hero{min-height:380px}.top{position:static}.container{padding-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="signature"><span class="mark" aria-hidden="true">◇</span><span>STUDIO PLATFORM</span><span class="flag">WHITE-LABEL · LIVE EDITOR PREVIEW</span></div>
+<div class="tools"><button class="button" type="button" id="jumpEdit">Open Demo Editor</button><button class="button" type="button" id="resetTop">Reset Demo</button><a class="button primary" href="mailto:agenticcommerce975@gmail.com?subject=Studio%20Platform%20-%20Buyer%20Inquiry">Request Buyer Brief</a></div>
+</header>
+<main class="container">
+<div class="hero" aria-labelledby="brandTitle">
+<div><p class="kicker">Your studio. Your stories. Your platform.</p><h1 id="brandTitle">Northlight Motion</h1><p id="tagline" class="lead">A fictional film studio creating thoughtful moving images.</p><p class="meta">INTERACTIVE WHITE-LABEL SHOWCASE · ALL CONTENT FICTIONAL · NO BACKEND</p></div>
+</div>
+<div class="note"><strong>What is this?</strong> A working, isolated browser-only sales demonstration. Edit the fictional studio identity and content below; the preview updates immediately. Changes are saved only in this browser. This is not the original BLACK LAUREL repository, a connected CMS, or proof of production readiness.</div>
+<section class="section" aria-labelledby="filmsTitle"><div class="section-header"><div><p class="kicker">01 / Selected projects</p><h2 id="filmsTitle">Film archive</h2></div><p class="meta">DYNAMIC EDITOR PREVIEW</p></div><div class="cards" id="filmCards" aria-live="polite"></div></section>
+<section class="section" aria-labelledby="crewTitle"><div class="section-header"><div><p class="kicker">02 / Who we are</p><h2 id="crewTitle">Creative team</h2></div><p class="meta">FICTIONAL PROFILES</p></div><div class="crew" id="peopleCards" aria-live="polite"></div></section>
+<section class="section" id="editor" aria-labelledby="editorTitle">
+<div class="section-header"><div><p class="kicker">03 / Try the workflow</p><h2 id="editorTitle">Studio Desk — interactive editor</h2></div><p class="status" id="saveStatus" role="status">DEMO MODE · NO LOGIN REQUIRED</p></div>
+<div class="desk">
+<aside class="desk-nav"><strong>STUDIO DESK</strong><p>White-label settings</p><p>✦ Studio name and mission</p><p>✦ Film inventory</p><p>✦ People & roles</p><p>✦ Studio theme</p><hr style="border:0;border-top:1px solid #3b4653;margin:22px 0"><p>Edits remain on this device. No client data, actual users, payments, or production API calls.</p></aside>
+<div class="desk-main">
+<div class="columns">
+<div class="control"><label for="studioName">Studio name</label><input id="studioName" maxlength="80" autocomplete="off"></div>
+<div class="control"><label for="studioMission">Positioning statement</label><input id="studioMission" maxlength="180" autocomplete="off"></div>
+<div class="control"><label for="filmName">First film title</label><input id="filmName" maxlength="90" autocomplete="off"></div>
+<div class="control"><label for="filmGenre">Film category</label><input id="filmGenre" maxlength="45" autocomplete="off"></div>
+<div class="control"><label for="teamName">First team member</label><input id="teamName" maxlength="80" autocomplete="off"></div>
+<div class="control"><label for="teamRole">Role</label><input id="teamRole" maxlength="80" autocomplete="off"></div>
+<div class="control"><label for="theme">Brand accent</label><input id="theme" type="color" value="#d5b08d" style="height:50px;padding:5px"></div>
+<div class="control"><label for="newFilm">Add fictional film</label><input id="newFilm" maxlength="90" placeholder="e.g. A New Scene" autocomplete="off"><button class="button" id="addFilm" type="button" style="margin-top:8px">+ Add Film</button></div>
+</div><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:15px"><button type="button" class="button primary" id="saveDemo">Save Preview</button><button type="button" class="button" id="resetDemo">Reset to Example</button></div>
+</div></div>
+</section>
+<footer class="footer"><div><strong>STUDIO PLATFORM / WHITE-LABEL EVALUATION</strong><p>Fictional browser demonstration only. Reusable source and commercial terms are subject to separate technical and intellectual-property review. No brand, film, photograph or third-party rights are included in this public preview.</p></div><a class="button primary" href="mailto:agenticcommerce975@gmail.com?subject=Confidential%20Studio%20Platform%20Demo%20Request">Discuss Licensing / Acquisition →</a></footer>
+</main>
+<script>
+(function(){
+'use strict';
+var key='studio-platform-fictional-demo-v1';
+var example={
+ studio:'Northlight Motion',mission:'A fictional film studio creating thoughtful moving images.',accent:'#d5b08d',
+ films:[{name:'A Quiet Departure',genre:'Short film · drama'},{name:'Beyond the Frame',genre:'Documentary · in development'}],
+ people:[{name:'Mara Ellison',role:'Creative director'},{name:'Noah Verne',role:'Producer'}]
+};
+var data;
+try{data=JSON.parse(localStorage.getItem(key)||'null');}catch(e){data=null;}
+if(!data||typeof data!=='object'||!Array.isArray(data.films)||!Array.isArray(data.people))data=JSON.parse(JSON.stringify(example));
+function el(id){return document.getElementById(id);}
+function trim(v,max){return String(v||'').trim().slice(0,max);}
+function node(tag,cls,txt){var n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=String(txt);return n;}
+function add(parent,tag,cls,txt){var n=node(tag,cls,txt);parent.appendChild(n);return n;}
+function render(){
+  data.studio=trim(data.studio,80)||example.studio;
+  data.mission=trim(data.mission,180)||example.mission;
+  if(!/^#[a-fA-F0-9]{6}$/.test(data.accent))data.accent=example.accent;
+  document.documentElement.style.setProperty('--accent',data.accent);
+  el('brandTitle').textContent=data.studio;el('tagline').textContent=data.mission;
+  var films=el('filmCards');films.replaceChildren();
+  data.films.slice(0,8).forEach(function(f,i){
+    var c=add(films,'article','card');add(c,'div','art',String(i+1).padStart(2,'0'));
+    var b=add(c,'div','card-body');add(b,'p','',trim(f.genre,45));add(b,'h3','',trim(f.name,90));add(b,'p','','FICTIONAL DEMO RECORD');
+  });
+  var crew=el('peopleCards');crew.replaceChildren();
+  data.people.slice(0,5).forEach(function(p){
+    var c=add(crew,'article','person');var initials=trim(p.name,80).split(/\s+/).map(function(s){return s[0]||''}).join('').slice(0,2).toUpperCase();
+    add(c,'div','avatar',initials);add(c,'h3','',trim(p.name,80));add(c,'p','meta',trim(p.role,80));
+  });
+  el('studioName').value=data.studio;el('studioMission').value=data.mission;
+  el('filmName').value=data.films[0]?data.films[0].name:'';el('filmGenre').value=data.films[0]?data.films[0].genre:'';
+  el('teamName').value=data.people[0]?data.people[0].name:'';el('teamRole').value=data.people[0]?data.people[0].role:'';
+  el('theme').value=data.accent;
+}
+function pull(){
+  data.studio=trim(el('studioName').value,80)||example.studio;
+  data.mission=trim(el('studioMission').value,180)||example.mission;
+  data.accent=el('theme').value;
+  if(!data.films.length)data.films.push({});
+  if(!data.people.length)data.people.push({});
+  data.films[0].name=trim(el('filmName').value,90)||example.films[0].name;
+  data.films[0].genre=trim(el('filmGenre').value,45)||example.films[0].genre;
+  data.people[0].name=trim(el('teamName').value,80)||example.people[0].name;
+  data.people[0].role=trim(el('teamRole').value,80)||example.people[0].role;
+}
+function persist(){
+  try{localStorage.setItem(key,JSON.stringify(data));el('saveStatus').textContent='SAVED LOCALLY · FICTIONAL DATA';}
+  catch(e){el('saveStatus').textContent='PREVIEW ONLY · LOCAL STORAGE UNAVAILABLE';}
+}
+['studioName','studioMission','filmName','filmGenre','teamName','teamRole','theme'].forEach(function(id){
+  el(id).addEventListener('input',function(){pull();render();persist();});
+});
+el('addFilm').addEventListener('click',function(){
+ var title=trim(el('newFilm').value,90);if(!title)return;
+ pull();data.films.push({name:title,genre:'Concept · fictional'});data.films=data.films.slice(-8);render();el('newFilm').value='';persist();
+});
+el('saveDemo').addEventListener('click',function(){pull();render();persist();});
+function reset(){data=JSON.parse(JSON.stringify(example));try{localStorage.removeItem(key);}catch(e){}render();el('saveStatus').textContent='EXAMPLE RESET · FICTIONAL DATA';}
+el('resetDemo').addEventListener('click',reset);el('resetTop').addEventListener('click',reset);
+el('jumpEdit').addEventListener('click',function(){el('editor').scrollIntoView({behavior:'smooth'});el('studioName').focus({preventScroll:true});});
+render();
+})();
+</script>
+</body>
+</html>
