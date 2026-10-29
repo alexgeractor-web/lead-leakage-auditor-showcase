@@ -39,6 +39,10 @@ Record: check ID, source record ID (in restricted evidence only), expected outco
 
 **Acceptance language:** “In this defined sample and these fields, N exceptions were found; remaining risk is unmeasured.” Do **not** say “all records verified,” “no migration errors,” or “revenue recovered” based on a small sample.
 
+## Native CRM functionality comes first
+
+For **HubSpot** users, first review its [built-in duplicate management](https://knowledge.hubspot.com/records/manage-duplicate-records) and [record-merge behavior](https://knowledge.hubspot.com/records/merge-records). HubSpot documents that merged records **cannot be unmerged**. This makes pre-merge review, documented source IDs, and appropriate backup/restore planning especially important. Do not buy an external tool for checks already met by native features; independent snapshot QA is only potentially useful where it addresses a verified gap.
+
 ## What our prototypes do — and do not do
 
 The **CRM Migration Validator** is an experimental scoped snapshot comparator, not a live HubSpot merge-history or consent auditor. The **Lead Leakage Auditor** is a local, offline CSV workflow-exception prototype, not an automatic merge-fixer or proof of recoverable revenue. The manual checks above require authorized CRM access and a human reviewer; they are not claimed software features.
