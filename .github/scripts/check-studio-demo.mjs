@@ -36,7 +36,14 @@ const get=id=>nodes.get(id);
 assert.equal(get('brandTitle').textContent,'Northlight Motion');
 assert.equal(get('filmCards').children.length,2);
 assert.equal(get('peopleCards').children.length,2);
-get('studioName').value='Example Films Group';
+get('studioName').value='Example Films';
+get('studioName').listeners.input();
+assert.equal(get('brandTitle').textContent,'Example Films');
+// An in-progress space must remain in the actual input while the user keeps typing.
+get('studioName').value='Example Films ';
+get('studioName').listeners.input();
+assert.equal(get('studioName').value,'Example Films ','do not erase trailing spaces during input');
+get('studioName').value+='Group';
 get('studioName').listeners.input();
 assert.equal(get('brandTitle').textContent,'Example Films Group');
 assert.ok(store.size>0);
