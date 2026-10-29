@@ -81,7 +81,7 @@ function el(id){return document.getElementById(id);}
 function trim(v,max){return String(v||'').trim().slice(0,max);}
 function node(tag,cls,txt){var n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=String(txt);return n;}
 function add(parent,tag,cls,txt){var n=node(tag,cls,txt);parent.appendChild(n);return n;}
-function render(){
+function render(skipFormControls){
   data.studio=trim(data.studio,80)||example.studio;
   data.mission=trim(data.mission,180)||example.mission;
   if(!/^#[a-fA-F0-9]{6}$/.test(data.accent))data.accent=example.accent;
@@ -97,10 +97,13 @@ function render(){
     var c=add(crew,'article','person');var initials=trim(p.name,80).split(/\s+/).map(function(s){return s[0]||''}).join('').slice(0,2).toUpperCase();
     add(c,'div','avatar',initials);add(c,'h3','',trim(p.name,80));add(c,'p','meta',trim(p.role,80));
   });
+  // Do not reset input value/caret during typing (including spaces and punctuation).
+  if(!skipFormControls){
   el('studioName').value=data.studio;el('studioMission').value=data.mission;
-  el('filmName').value=data.films[0]?data.films[0].name:'';el('filmGenre').value=data.films[0]?data.films[0].genre:'';
-  el('teamName').value=data.people[0]?data.people[0].name:'';el('teamRole').value=data.people[0]?data.people[0].role:'';
-  el('theme').value=data.accent;
+    el('filmName').value=data.films[0]?data.films[0].name:'';el('filmGenre').value=data.films[0]?data.films[0].genre:'';
+    el('teamName').value=data.people[0]?data.people[0].name:'';el('teamRole').value=data.people[0]?data.people[0].role:'';
+    el('theme').value=data.accent;
+  }
 }
 function pull(){
   data.studio=trim(el('studioName').value,80)||example.studio;
@@ -118,7 +121,7 @@ function persist(){
   catch(e){el('saveStatus').textContent='PREVIEW ONLY · LOCAL STORAGE UNAVAILABLE';}
 }
 ['studioName','studioMission','filmName','filmGenre','teamName','teamRole','theme'].forEach(function(id){
-  el(id).addEventListener('input',function(){pull();render();persist();});
+  el(id).addEventListener('input',function(){pull();render(true);persist();});
 });
 el('addFilm').addEventListener('click',function(){
  var title=trim(el('newFilm').value,90);if(!title)return;
