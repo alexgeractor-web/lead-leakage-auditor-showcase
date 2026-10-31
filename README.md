@@ -50,6 +50,10 @@ The public showcase does **not** publish proprietary software source, customer r
 
 **Founder / community:** [Alex Ger Ventures on Reddit](https://www.reddit.com/user/AlexGerVentures/) — discussions and practical ideas; technical questions are welcome in the GitHub Issues section.
 
+## Separate film-industry software asset for sale
+
+**Cinema Studio Platform** is an independent software-only acquisition opportunity with a negotiable **USD 29,900 seller asking discussion**. It is separate from Lead Leakage Auditor and from the BLACK LAUREL PICTURES studio itself. The public [fictional interactive demo](studio-platform-preview/index.html), [acquisition offer](studio-platform-preview/offer.html), and [buyer brief](studio-platform-preview/BUYER_BRIEF.md) explain what is and is not proposed for transfer. This price is **not** independently appraised or asserted below market. Legal code ownership and final buyer acceptance remain required before an exclusive assignment.
+
 ## Security and IP
 This repository is deliberately PUBLIC. Any material uploaded here is visible and may be copied. The commercial code is maintained separately in a **PRIVATE** repository. The documents are published for evaluation only; no open-source license is granted. See [LICENSE](LICENSE) and [SECURITY.md](SECURITY.md).
 
